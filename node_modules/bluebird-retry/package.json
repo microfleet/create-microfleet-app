@@ -1,0 +1,46 @@
+{
+  "name": "bluebird-retry",
+  "version": "0.11.0",
+  "description": "utility for retrying a bluebird promise until it succeeds",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/demmer/bluebird-retry.git"
+  },
+  "keywords": [
+    "bluebird",
+    "promise",
+    "retry"
+  ],
+  "author": "Michael Demmer <demmer@jut.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/demmer/bluebird-retry/issues"
+  },
+  "homepage": "https://github.com/demmer/bluebird-retry",
+  "peerDependencies": {
+    "bluebird": ">=2.3.10"
+  },
+  "devDependencies": {
+    "bluebird": "^2.3.10",
+    "browserify": "^13.0.0",
+    "chai": "^1.9.2",
+    "gulp": "^3.9.1",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.2.0",
+    "gulp-mocha-phantomjs": "^0.11.0",
+    "mocha": "^2.4.5",
+    "requirejs": "^2.2.0",
+    "underscore": ">=1.7.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "files": [
+    "browser/*.js",
+    "index.js",
+    "lib"
+  ]
+}
