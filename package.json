@@ -5,7 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "mfleet"
+    "start": "mfleet",
+    "test": "mocha"
   },
   "dependencies": {
     "@hapi/hapi": "^18.3.2",
@@ -14,5 +15,10 @@
     "@microfleet/validation": "^8.1.2",
     "common-errors": "^1.0.5",
     "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   }
 }
