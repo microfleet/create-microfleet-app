@@ -283,10 +283,10 @@
     debug "^3.1.0"
     lodash "^4.17.10"
 
-"@microfleet/core@^14.0.2":
-  version "14.0.2"
-  resolved "https://registry.yarnpkg.com/@microfleet/core/-/core-14.0.2.tgz#ff0c7d19ed2591f7633e98ae23955cd52b70d28b"
-  integrity sha512-Biw+Ux9CcLdXswF/m4wOrmtyUjCxLEs+EcdjCpTyRGIyqwQohz2mmffVx6AyrUdT4SNYyzpcqydq5I+HvmyUog==
+"@microfleet/core@^15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@microfleet/core/-/core-15.0.0.tgz#675be50ee09d8f62ae26637afa9aed649dc7440e"
+  integrity sha512-AsBpa5LeaXnQnkv44MkzPLIDXydkFEKj7ZRO0lTbJHLwybYAQlqenXI6egBGPdmaztuoAJYTtTQpSX8iTobRCQ==
   dependencies:
     bluebird "^3.5.5"
     bluebird-retry "^0.11.0"
@@ -305,7 +305,7 @@
     lsmod "^1.0.0"
     opentracing "^0.14.4"
     pino "^5.13.2"
-    pino-multi-stream "^4.1.0"
+    pino-multi-stream "^4.2.0"
     pino-pretty "^3.2.1"
     read-pkg-up "^6.0.0"
     rfdc "^1.1.4"
@@ -313,7 +313,7 @@
     sonic-boom "^0.7.5"
     sort-by "^1.1.1"
     stdout-stream "^1.4.1"
-    yargs-parser "^13.1.1"
+    yargs-parser "^14.0.0"
 
 "@microfleet/transport-amqp@^15.0.0":
   version "15.0.0"
@@ -1405,12 +1405,12 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
-pino-multi-stream@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/pino-multi-stream/-/pino-multi-stream-4.1.0.tgz#1ba9fc0e101775283eed308cc4e4b43f622b5d3d"
-  integrity sha512-lmJz8aWQFEKwcOxefrQMIuqZ8rpi6IUpgZsDq9PcE4fnANJkKDKbxJewjwMF6Ccwl3oc3SZzFyfiMM2In7MJfA==
+pino-multi-stream@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/pino-multi-stream/-/pino-multi-stream-4.2.0.tgz#c22c5aee4b7396348fa10257448ff8461d4b4231"
+  integrity sha512-glkZbzknB5gU6LdFp6jHghfQ/4SGt0fLNpXpiZAuiPLzB/dslkN4cGwRNy1HuvaVYDEOA0Jor64k7omh3B6A1w==
   dependencies:
-    pino "^5.12.6"
+    pino "^5.13.2"
 
 pino-pretty@^3.2.1:
   version "3.2.1"
@@ -1432,7 +1432,7 @@ pino-std-serializers@^2.3.0:
   resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-2.4.2.tgz#cb5e3e58c358b26f88969d7e619ae54bdfcc1ae1"
   integrity sha512-WaL504dO8eGs+vrK+j4BuQQq6GLKeCCcHaMB2ItygzVURcL1CycwNEUHTD/lHFHs/NL5qAz2UKrjYWXKSf4aMQ==
 
-pino@^5.12.6, pino@^5.13.2:
+pino@^5.13.2:
   version "5.13.2"
   resolved "https://registry.yarnpkg.com/pino/-/pino-5.13.2.tgz#773416c9764634276e7b2ae021357679ff7b5634"
   integrity sha512-WwOSCy36/gWhinsqWqAnuwIi2WtcH+jvoyeLm3bjUALIrzWIst0AovQjK4jVvSN2l64KFPfi3gd2fjsTovjdLQ==
@@ -1945,10 +1945,18 @@ yargs-parser@^11.1.1:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
-yargs-parser@^13.0.0, yargs-parser@^13.1.1:
+yargs-parser@^13.0.0:
   version "13.1.1"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-13.1.1.tgz#d26058532aa06d365fe091f6a1fc06b2f7e5eca0"
   integrity sha512-oVAVsHz6uFrg3XQheFII8ESO2ssAf9luWuAd6Wexsu4F3OtIW0o8IribPXYrD4WC24LWtPrJlGy87y5udK+dxQ==
+  dependencies:
+    camelcase "^5.0.0"
+    decamelize "^1.2.0"
+
+yargs-parser@^14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-14.0.0.tgz#42e25777b06718ec99eac2c3a98ad3de73b6818f"
+  integrity sha512-zn/Mnx+tbFjkCFUodEpjXckNS65NfpB5oyqOkDDEG/8uxlfLZJu2IoBLQFjukUkn9rBbGkVYNzrDh6qy4NUd3g==
   dependencies:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
