@@ -9,16 +9,16 @@
     "test": "mocha"
   },
   "dependencies": {
-    "@hapi/hapi": "^18.3.2",
-    "@microfleet/core": "^14.0.2",
-    "@microfleet/transport-amqp": "^15.0.0",
-    "@microfleet/validation": "^8.1.2",
-    "common-errors": "^1.0.5",
-    "uuid": "^3.3.3"
+    "@hapi/hapi": "18.3.2",
+    "@microfleet/core": "14.0.2",
+    "@microfleet/transport-amqp": "15.0.0",
+    "@microfleet/validation": "8.1.2",
+    "common-errors": "1.0.5",
+    "uuid": "3.3.3"
   },
   "devDependencies": {
-    "mocha": "^6.2.0",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4"
+    "mocha": "6.2.0",
+    "request": "2.88.0",
+    "request-promise": "4.2.4"
   }
 }
