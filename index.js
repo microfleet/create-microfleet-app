@@ -10,6 +10,7 @@ class DemoApp extends Microfleet {
          directory: path.resolve(__dirname, './actions'),
          transports: [ActionTransport.http],
        },
+       extensions: { register: [] },
      },
      http: {
        server: {
@@ -17,7 +18,6 @@ class DemoApp extends Microfleet {
        },
        router: {
          enabled: true,
-         prefix: '',
        },
      },
    });
