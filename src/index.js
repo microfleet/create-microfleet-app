@@ -6,19 +6,7 @@ class DemoApp extends Microfleet {
    super({
      name: 'demo-app',
      router: {
-       routes: {
-         directory: path.resolve(__dirname, './actions'),
-         transports: [ActionTransport.http],
-       },
        extensions: { register: [] },
-     },
-     http: {
-       server: {
-         handler: 'hapi',
-       },
-       router: {
-         enabled: true,
-       },
      },
    });
  }

@@ -1,6 +1,6 @@
 const assert = require('assert');
 const rp = require('request-promise');
-const DemoApp = require('../index');
+const DemoApp = require('../src');
 
 describe('server', () => {
   it('should be able to start', async () => {
