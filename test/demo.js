@@ -17,7 +17,7 @@ describe('server', () => {
       const response = await rp({
         uri: 'http://0.0.0.0:3000/demo',
       });
-      assert(response, 'Hello, world!');
+      assert.strictEqual(response, 'Hello, world!');
     } finally {
       await demoApp.close();
     }
