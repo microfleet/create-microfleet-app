@@ -1,7 +1,7 @@
 const { ActionTransport } = require('@microfleet/core');
 
 function ProtectedAction() {
-  return 'Hello, world by authentificate user!\n';
+  return 'Hello, world by authentificated user!\n';
 }
 
 ProtectedAction.auth = {
