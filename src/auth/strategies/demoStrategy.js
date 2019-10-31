@@ -8,7 +8,7 @@ function verifyToken(token) {
   }
 }
 
-function bearerAuth(request) {
+function demoStrategy(request) {
   const { action } = request;
   const { auth } = action;
   const { strategy = 'required' } = auth;
@@ -29,4 +29,4 @@ function bearerAuth(request) {
   }
 }
 
-module.exports = bearerAuth;
+module.exports = demoStrategy;
