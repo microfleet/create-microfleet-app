@@ -1,3 +1,5 @@
+const { demoStrategy } = require('./auth')
+
 module.exports = {
   name: 'demo-app',
   router: {
@@ -10,4 +12,7 @@ module.exports = {
       test: 'i-am-NOT-a-secret',
     },
   },
+  auth: {
+    strategies: { demoStrategy },
+  }
 }
