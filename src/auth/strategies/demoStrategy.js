@@ -16,11 +16,6 @@ function demoStrategy(request) {
 
   if (authorization) {
     const [auth, token] = authorization.split(/\s+/, 2); // Authorization: Bearer [token]
-
-    if (!token) {
-      throw new HttpStatusError(401, 'Credentials Required');
-    }
-
     return verifyToken(token)
   }
 
