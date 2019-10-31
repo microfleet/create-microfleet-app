@@ -1,4 +1,4 @@
-const { Microfleet, ActionTransport } = require('@microfleet/core')
+const { Microfleet } = require('@microfleet/core')
 const path = require('path')
 const merge = require('lodash/merge')
 const confidence = require('ms-conf')
@@ -12,4 +12,4 @@ class DemoApp extends Microfleet {
   }
 }
 
-module.exports = DemoApp
+module.exports = DemoApp;

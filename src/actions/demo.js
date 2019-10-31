@@ -1,9 +1,9 @@
-const { ActionTransport } = require('@microfleet/core');
+const { ActionTransport } = require('@microfleet/core')
 
 function demoAction() {
-  return 'Hello, world!\n';
+  return 'Hello, world!\n'
 }
 
-demoAction.transports = [ActionTransport.http];
+demoAction.transports = [ActionTransport.http]
 
-module.exports = demoAction;
+module.exports = demoAction
