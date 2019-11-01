@@ -10,4 +10,4 @@ module.exports = {
       test: 'i-am-NOT-a-secret',
     }
   }
-};
+}
