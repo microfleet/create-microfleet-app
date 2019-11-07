@@ -1,0 +1,17 @@
+{
+  "$id": "todo.list",
+  "type": "object",
+  "required": [
+    "page",
+    "hidden"
+  ],
+  "properties": {
+    "page": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "hidden": {
+      "type": "boolean"
+    }
+  }
+}
