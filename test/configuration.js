@@ -13,6 +13,9 @@ describe('configuration', () => {
         json: true,
       })
 
+      assert.strictEqual(demoApp.config.name, 'demo-app')
+      assert.strictEqual(demoApp.config.app.someSecret, 'i-am-NOT-a-secret')
+      assert.deepStrictEqual(demoApp.config.app.someEnvDependentValues, { replyTo: 'info-production@demo.com' })
       assert.strictEqual(response.name, 'demo-app')
       assert.strictEqual(response.app.someSecret, 'i-am-NOT-a-secret')
       assert.deepStrictEqual(response.app.someEnvDependentValues, { replyTo: 'info-production@demo.com' })
