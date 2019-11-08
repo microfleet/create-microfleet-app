@@ -1,15 +1,15 @@
-const { Microfleet, ActionTransport } = require('@microfleet/core');
-const path = require('path');
+const { Microfleet, ActionTransport } = require('@microfleet/core')
+const path = require('path')
+const merge = require('lodash/merge')
+const confidence = require('ms-conf')
+
+confidence.prependDefaultConfiguration(path.resolve(__dirname, './config.js'))
+const config = confidence.get('/', { env: process.env.NODE_ENV })
 
 class DemoApp extends Microfleet {
- constructor() {
-   super({
-     name: 'demo-app',
-     router: {
-       extensions: { register: [] },
-     },
-   });
- }
+  constructor(opts = {}) {
+    super(merge({}, config, opts))
+  }
 }
 
-module.exports = DemoApp;
+module.exports = DemoApp
