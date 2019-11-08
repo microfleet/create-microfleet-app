@@ -1,5 +1,5 @@
 {
-  "$id": "todo.list",
+  "$id": "validation.query-string",
   "type": "object",
   "required": [
     "page",

@@ -1,16 +1,16 @@
 const { ActionTransport } = require('@microfleet/core')
 
-function listTodo(request) {
+function respondOk(request) {
   return { query : request.query}
 }
 
-listTodo.transports = [ActionTransport.http]
-listTodo.transportsOptions = {
+respondOk.transports = [ActionTransport.http]
+respondOk.transportsOptions = {
   [ActionTransport.http]: {
     methods: ['get'],
   },
 }
-listTodo.transformQuery = (query) => {
+respondOk.transformQuery = (query) => {
   query.page *= 1
 
   switch (query.hidden) {
@@ -29,6 +29,6 @@ listTodo.transformQuery = (query) => {
   return query
 }
 
-listTodo.schema = 'todo.list'
+respondOk.schema = 'validation.query-string'
 
-module.exports = listTodo
+module.exports = respondOk

@@ -1,10 +1,10 @@
 const { ActionTransport } = require('@microfleet/core')
 
-function createTodo(request) {
+function respondOk(request) {
   const { todo } = request.params
   return { ok: { todo }}
 }
 
-createTodo.transports = [ActionTransport.http]
-createTodo.schema = 'todo.create'
-module.exports = createTodo
+respondOk.transports = [ActionTransport.http]
+respondOk.schema = 'validation.schema'
+module.exports = respondOk

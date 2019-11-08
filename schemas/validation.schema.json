@@ -1,5 +1,5 @@
 {
-  "$id": "todo.create",
+  "$id": "validation.schema",
   "type": "object",
   "required": [
     "todo"

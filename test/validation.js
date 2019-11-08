@@ -29,7 +29,7 @@ describe('#todo validation', () => {
       })
 
       assert(error.statusCode === 400, 'must throw validation error')
-      assert(error.message === 'todo.list validation failed: data.page should be >= 1, data.hidden should be boolean')
+      assert(error.message === 'validation.query-string validation failed: data.page should be >= 1, data.hidden should be boolean')
     })
 
     it('performs some work when qs is valid', async () => {
@@ -61,7 +61,7 @@ describe('#todo validation', () => {
 
       assert(error.statusCode === 400, 'must throw validation error')
       assert(error.name === 'HttpStatusError')
-      assert(error.message === 'todo.create validation failed: data.todo should have required property \'state\', data.todo should have required property \'name\'')
+      assert(error.message === 'validation.schema validation failed: data.todo should have required property \'state\', data.todo should have required property \'name\'')
     })
 
     it('performs some work when data is valid', async () => {
