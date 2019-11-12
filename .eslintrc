@@ -1,0 +1,6 @@
+{
+  "extends": "makeomatic",
+  "rules": {
+    "semi": ["error", "never"]
+  }
+}
