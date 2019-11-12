@@ -12,4 +12,4 @@ class DemoApp extends Microfleet {
   }
 }
 
-module.exports = DemoApp;
+module.exports = DemoApp
