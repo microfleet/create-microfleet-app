@@ -24,7 +24,7 @@ describe('Server process protected action:', () => {
       uri: 'http://0.0.0.0:3000/protected',
     })
 
-    await assert.rejects(request, 'Credentials Required')
+    await assert.rejects(request)
   })
 
   it('reject with invalid credentials', async () => {
@@ -35,6 +35,6 @@ describe('Server process protected action:', () => {
       },
     })
 
-    await assert.rejects(request, 'Invalid Token')
+    await assert.rejects(request)
   })
 })

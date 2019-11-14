@@ -23,7 +23,7 @@ function verifyToken(authType, token) {
   return userId
 }
 
-function demoStrategy(request) {
+function demo(request) {
   const { action } = request
   const { auth } = action
   const { strategy = REQUIRED_STRATEGY } = auth
@@ -49,4 +49,4 @@ function demoStrategy(request) {
   return { user }
 }
 
-module.exports = demoStrategy
+module.exports = demo

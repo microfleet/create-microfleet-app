@@ -1,5 +1,5 @@
-const demoStrategy = require('./strategies/demo-strategy')
+const demo = require('./strategies/demo')
 
 module.exports = {
-  demoStrategy,
+  demo,
 }
