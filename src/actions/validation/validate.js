@@ -1,17 +1,17 @@
-const { ActionTransport } = require('@microfleet/core');
+const { ActionTransport } = require('@microfleet/core')
 
 function validateTodo(request) {
-  const { todo } = request.params;
+  const { todo } = request.params
   const validationResult = this
     .validate('objects.todo', todo)
     .then((result) => {
       return { validationResult: result }
     })
     .catch({ name: 'HttpStatusError' }, (e) => {
-      return { validationError: e };
-    });
-  return validationResult;
+      return { validationError: e }
+    })
+  return validationResult
 }
 
-validateTodo.transports = [ActionTransport.http];
-module.exports = validateTodo;
+validateTodo.transports = [ActionTransport.http]
+module.exports = validateTodo

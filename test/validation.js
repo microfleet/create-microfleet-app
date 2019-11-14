@@ -12,37 +12,6 @@ describe('#todo validation', () => {
     await this.demoapp.close()
   })
 
-  describe('query string validation', () => {
-    const listTodo = rp.defaults({
-      uri: 'http://0.0.0.0:3000/validation/query-string',
-      method: 'GET',
-      json: true,
-    })
-
-    it('throws validation error on incorrect data', async () => {
-      const { error } = await listTodo({
-        qs: {
-          page: 0,
-        },
-      }).catch((e) => {
-        return e
-      })
-
-      assert(error.statusCode === 400, 'must throw validation error')
-      assert(error.message === 'validation.query-string validation failed: data.page should be >= 1, data.hidden should be boolean')
-    })
-
-    it('performs some work when qs is valid', async () => {
-      const qs = {
-        page:10,
-        hidden: true,
-      }
-      const response = await listTodo({ qs })
-
-      assert.deepStrictEqual(response.query, qs, 'returns parsed qs as result')
-    })
-  })
-
   describe('request body validation', () => {
     const createTodo = rp.defaults({
       uri: 'http://0.0.0.0:3000/validation/schema',
@@ -61,13 +30,14 @@ describe('#todo validation', () => {
 
       assert(error.statusCode === 400, 'must throw validation error')
       assert(error.name === 'HttpStatusError')
+      // eslint-disable-next-line max-len
       assert(error.message === 'validation.schema validation failed: data.todo should have required property \'state\', data.todo should have required property \'name\'')
     })
 
     it('performs some work when data is valid', async () => {
       const todo = {
-        name: "myTodo",
-        description: "my description",
+        name: 'myTodo',
+        description: 'my description',
         state: true,
       }
 
@@ -102,8 +72,8 @@ describe('#todo validation', () => {
 
     it('performs some work when data is valid', async () => {
       const todo = {
-        name: "myTodo",
-        description: "my description",
+        name: 'myTodo',
+        description: 'my description',
         state: true,
       }
 

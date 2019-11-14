@@ -2,7 +2,7 @@ const { ActionTransport } = require('@microfleet/core')
 
 function respondOk(request) {
   const { todo } = request.params
-  return { ok: { todo }}
+  return { ok: { todo } }
 }
 
 respondOk.transports = [ActionTransport.http]
