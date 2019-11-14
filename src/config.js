@@ -14,5 +14,5 @@ module.exports = {
   },
   auth: {
     strategies: { demoStrategy },
-  }
+  },
 }
