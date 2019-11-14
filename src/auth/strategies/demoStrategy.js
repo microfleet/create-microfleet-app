@@ -10,14 +10,10 @@ const users = {
 }
 
 function verifyToken(token) {
-  if (!token) {
-    throw new HttpStatusError(403, 'Invalid Token');
-  }
-
   const [body, userId] = token.split(':', 2);
 
   if (body !== 'demo' || !userId) {
-    throw new HttpStatusError(403, 'Invalid Token');
+    throw new HttpStatusError(403, 'Malformed Token');
   }
 
   return userId
@@ -31,6 +27,11 @@ function demoStrategy(request) {
 
   if (authorization) {
     const [auth, token] = authorization.split(/\s+/, 2); // Authorization: Bearer [token]
+
+    if (!auth || !token) {
+      throw new HttpStatusError(403, 'Invalid Token');
+    }
+
     const userId = verifyToken(token)
     const user = users[userId]
 
@@ -41,7 +42,7 @@ function demoStrategy(request) {
     return { user }
   }
 
-  if (strategy === 'required') {
+  if (strategy === REQUIRED_STRATEGY) {
     throw new HttpStatusError(401, 'Credentials Required');
   }
 }
