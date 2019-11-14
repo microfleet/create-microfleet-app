@@ -1,12 +1,15 @@
-const { ActionTransport } = require('@microfleet/core');
+const { ActionTransport } = require('@microfleet/core')
 
-function protectedAction() {
-  return 'Hello, world by authentificated user!\n';
+const { REQUIRED_STRATEGY } = require('../constants')
+
+function protectedAction(request) {
+  const { user } = request.auth.credentials
+  return `Hello, world by ${user.name}!`;
 }
 
 protectedAction.auth = {
   name: 'demoStrategy',
-  strategy: 'required',
+  strategy: REQUIRED_STRATEGY,
   passAuthError: true,
 };
 protectedAction.transports = [ActionTransport.http];

@@ -12,11 +12,11 @@ describe('Server process protected action:', () => {
     const response = await rp({
       uri: 'http://0.0.0.0:3000/protected',
       headers: {
-        authorization: `Bearer some-valid-token`
+        authorization: `Bearer demo:1`
       }
     });
 
-    assert(response);
+    assert.strictEqual(response, 'Hello, world by Demo User!');
   });
 
   it('reject without credentials', async () => {
