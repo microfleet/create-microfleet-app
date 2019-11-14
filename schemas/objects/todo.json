@@ -1,5 +1,4 @@
 {
-  "$id": "objects.todo",
   "type": "object",
   "required": [
     "name",
