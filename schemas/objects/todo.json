@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "name",
+    "description",
+    "state"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 150
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

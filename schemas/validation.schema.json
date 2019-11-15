@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "required": [
+    "todo"
+  ],
+  "properties": {
+    "todo": {
+      "$ref": "objects.todo"
+    }
+  }
+}

@@ -3,6 +3,9 @@ module.exports = {
   router: {
     extensions: { register: [] },
   },
+  validator: {
+    schemas: ['../schemas'],
+  },
   app: {
     someSecret: {
       $filter: 'env',
