@@ -1,7 +1,12 @@
+const { demo } = require('./auth')
+
 module.exports = {
   name: 'demo-app',
   router: {
     extensions: { register: [] },
+    auth: {
+      strategies: { demo },
+    },
   },
   validator: {
     schemas: ['../schemas'],
