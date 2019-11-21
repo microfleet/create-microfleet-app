@@ -43,7 +43,7 @@ function demo(request) {
   const user = users[userId]
 
   if (!user) {
-    throw new HttpStatusError(401, "You don't have permission to access")
+    throw new HttpStatusError(401, 'You don\'t have permission to access')
   }
 
   return { user }
