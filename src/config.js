@@ -1,4 +1,5 @@
 const { demo } = require('./auth')
+const { FileLogger } = require('./logger')
 
 module.exports = {
   name: 'demo-app',
@@ -10,6 +11,12 @@ module.exports = {
   },
   validator: {
     schemas: ['../schemas'],
+  },
+  logger: {
+    defaultLogger: {
+      $filter: 'env',
+      test: new FileLogger('info')
+    }
   },
   app: {
     someSecret: {
