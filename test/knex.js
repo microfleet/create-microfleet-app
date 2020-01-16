@@ -1,6 +1,5 @@
 const assert = require('assert')
 const rp = require('request-promise')
-const Errors = require('common-errors')
 const DemoApp = require('../src')
 
 describe('#knex connection', () => {
@@ -86,7 +85,7 @@ describe('#knex connection', () => {
         },
       })
 
-      const { id, created, ...dataToCheck } = todo;
+      const { id, created, ...dataToCheck } = todo
       assert.deepStrictEqual(updatedTodoData, dataToCheck, 'updates todo')
     })
 
@@ -103,7 +102,7 @@ describe('#knex connection', () => {
         body: { id: newTodoId },
       })
 
-      await assert.rejects(getTodoRequest , { statusCode: 404 }, 'should throw error')
+      await assert.rejects(getTodoRequest, { statusCode: 404 }, 'should throw error')
     })
   })
 })
