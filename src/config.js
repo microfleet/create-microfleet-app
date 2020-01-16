@@ -8,7 +8,6 @@ module.exports = {
     extensions: { register: [] },
     routes: {
       transports: [ActionTransport.amqp, ActionTransport.http],
-      prefix: 'demo-app',
     },
     auth: {
       strategies: { demo },
@@ -52,7 +51,7 @@ module.exports = {
       // retry config
       neck: 10,
       bindPersistantQueueToHeadersExchange: true,
-      queue: 'my-queue-123',
+      queue: 'demo-app-queue-123',
     },
     retry: {
       enabled: true,
@@ -61,7 +60,7 @@ module.exports = {
       factor: 1.2,
       maxRetries: 3,
       predicate(error, actionName) {
-        if (actionName === 'demo-app.amqp.consumer') {
+        if (actionName === 'amqp.consumer') {
           if (error instanceof Errors.TimeoutError) {
             // we should retry sending message
             return false
@@ -73,7 +72,6 @@ module.exports = {
     },
     router: {
       enabled: true,
-      prefix: 'demo-app2',
     },
   },
 }
