@@ -6,8 +6,9 @@
   "private": true,
   "scripts": {
     "start": "mfleet",
-    "test": "yarn lint && yarn test:e2e",
-    "test:e2e": "NODE_ENV=test mocha",
+    "test": "yarn lint && docker-compose -f test/docker-compose.yml run --rm tester yarn mocha test/suites/",
+    "posttest": "docker-compose -f test/docker-compose.yml down",
+    "pretest": "docker-compose -f test/docker-compose.yml up -d && sleep 5",
     "lint": "eslint ."
   },
   "dependencies": {

@@ -1,0 +1,22 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:12-alpine
+    expose: 
+      - "5432"
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+  tester:
+    expose:
+      - "3000"
+    build:
+      context: ../
+      dockerfile: Dockerfile.test
+    working_dir: /src
+    volumes:
+      - ${PWD}:/src
+    environment:
+      NODE_ENV: "test"
+      DEBUG: ${DEBUG}
+      NCONF_FILE_PATH: '["/src/test/config/test.js"]'
+    command: tail -f /dev/null

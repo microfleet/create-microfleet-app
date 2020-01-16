@@ -1,6 +1,6 @@
 const assert = require('assert')
 const rp = require('request-promise')
-const DemoApp = require('../src')
+const DemoApp = require('../../src')
 
 describe('#knex connection', () => {
   before(async () => {
