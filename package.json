@@ -8,9 +8,7 @@
     "start": "mfleet",
     "test": "yarn lint && yarn test:e2e",
     "test:e2e": "NODE_ENV=test mocha",
-    "lint": "eslint .",
-    "pretest": "if [ -f ./docker-compose.yml ]; then docker-compose up -d; sleep 10; fi",
-    "posttest": "if [ -f ./docker-compose.yml ]; then docker-compose down; fi"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@hapi/hapi": "^18.3.2",
