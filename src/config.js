@@ -1,13 +1,13 @@
+const { ActionTransport } = require('@microfleet/core')
+const Errors = require('common-errors')
 const { demo } = require('./auth')
-const { ActionTransport } = require('@microfleet/core');
-const Errors = require('common-errors');
 
 module.exports = {
   name: 'demo-app',
   router: {
     extensions: { register: [] },
     routes: {
-      transports: [ ActionTransport.amqp, ActionTransport.http ],
+      transports: [ActionTransport.amqp, ActionTransport.http],
       prefix: 'demo-app',
     },
     auth: {
@@ -23,7 +23,7 @@ module.exports = {
     'knex',
     'http',
     'router',
-    'amqp'
+    'amqp',
   ],
   app: {
     someSecret: {
@@ -52,7 +52,7 @@ module.exports = {
       // retry config
       neck: 10,
       bindPersistantQueueToHeadersExchange: true,
-      queue: 'my-queue-123'
+      queue: 'my-queue-123',
     },
     retry: {
       enabled: true,
@@ -68,12 +68,12 @@ module.exports = {
           }
         }
         // abort retry
-        return true;
+        return true
       },
     },
     router: {
       enabled: true,
       prefix: 'demo-app2',
-    }
-  }
+    },
+  },
 }

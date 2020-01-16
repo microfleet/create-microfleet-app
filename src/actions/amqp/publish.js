@@ -24,7 +24,7 @@ const { ActionTransport } = require('@microfleet/core')
 // }
 
 async function publishAction() {
-  const { amqp } = this;
+  const { amqp } = this
   const pResult = await amqp.publish('demo-app2.demo-app.amqp.consumer', { hello: 'world' })
   const pwResult = await amqp.publishAndWait('demo-app2.demo-app.amqp.consumer', { hello: 'world wait' })
 
