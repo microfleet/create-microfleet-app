@@ -1,4 +1,12 @@
 module.exports = {
+  amqp: {
+    transport: {
+      connection: {
+        host: 'amqp',
+        port: 5672,
+      },
+    },
+  },
   knex: {
     debug: false,
     client: 'pg',

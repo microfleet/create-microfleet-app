@@ -6,6 +6,10 @@ services:
       - "5432"
     environment:
       POSTGRES_PASSWORD: mysecretpassword
+  amqp:
+    image: rabbitmq:3.8-alpine
+    expose: 
+      - "5672"
   tester:
     expose:
       - "3000"
