@@ -6,13 +6,15 @@
   "private": true,
   "scripts": {
     "start": "mfleet",
-    "test": "yarn lint && yarn test:e2e",
-    "test:e2e": "NODE_ENV=test mocha",
+    "test": "yarn lint && docker-compose -f test/docker-compose.yml run --rm tester yarn mocha test/suites/",
+    "posttest": "docker-compose -f test/docker-compose.yml down",
+    "pretest": "docker-compose -f test/docker-compose.yml up -d && sleep 5",
     "lint": "eslint ."
   },
   "dependencies": {
     "@hapi/hapi": "^18.3.2",
     "@microfleet/core": "^15.0.0",
+    "@microfleet/plugin-knex": "^0.2.6",
     "@microfleet/transport-amqp": "^15.0.0",
     "@microfleet/validation": "^8.1.2",
     "common-errors": "^1.0.5",
@@ -25,6 +27,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-unicorn": "^14.0.0",
+    "husky": "^3.1.0",
     "mocha": "^6.2.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
