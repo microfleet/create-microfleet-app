@@ -39,6 +39,7 @@ describe('#knex connection', () => {
       name: 'myTodo',
       description: 'my description',
       state: true,
+      extradata: null,
     }
 
     afterEach(async () => {
@@ -75,6 +76,7 @@ describe('#knex connection', () => {
         name: 'myTodo-renamed',
         description: 'my description',
         state: false,
+        extradata: 'foo',
       }
 
       const todoId = await createTodo(todoData)

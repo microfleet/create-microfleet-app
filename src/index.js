@@ -11,9 +11,9 @@ class DemoApp extends Microfleet {
     super(merge({}, config, opts))
 
     // add migration connector
-    this.addConnector(ConnectorsTypes.migration, () => (
-      this.migrate('knex', `${__dirname}/migrations`)
-    ), 'knex-migration')
+    this.addConnector(ConnectorsTypes.migration, async () => {
+      await this.migrate('knex')
+    }, 'knex-migration')
   }
 }
 
