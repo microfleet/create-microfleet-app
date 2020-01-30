@@ -24,6 +24,7 @@ module.exports = {
     'http',
     'router',
     'amqp',
+    'redisCluster',
   ],
   app: {
     someSecret: {
@@ -44,6 +45,11 @@ module.exports = {
     },
     migrations: {
       directory: path.resolve(`${__dirname}/../migrations/knex`),
+    },
+  },
+  redis: {
+    options: {
+      keyPrefix: '{demo-app}',
     },
   },
   amqp: {

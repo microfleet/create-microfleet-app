@@ -14,6 +14,10 @@ class DemoApp extends Microfleet {
     this.addConnector(ConnectorsTypes.migration, async () => {
       await this.migrate('knex')
     }, 'knex-migration')
+
+    this.addConnector(ConnectorsTypes.migration, async () => {
+      await this.migrate('redis', path.resolve(`${__dirname}/../migrations/redis`))
+    }, 'redis-migration')
   }
 }
 

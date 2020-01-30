@@ -10,6 +10,8 @@ services:
     image: rabbitmq:3.8-alpine
     expose: 
       - "5672"
+  redis:
+    image: grokzen/redis-cluster
   tester:
     expose:
       - "3000"
