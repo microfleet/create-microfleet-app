@@ -1,5 +1,6 @@
 const { ActionTransport } = require('@microfleet/core')
 const Errors = require('common-errors')
+const path = require('path')
 const { demo } = require('./auth')
 
 module.exports = {
@@ -40,6 +41,9 @@ module.exports = {
       user: 'postgres',
       password: 'mysecretpassword',
       database: 'postgres',
+    },
+    migrations: {
+      directory: path.resolve(`${__dirname}/../migrations/knex`),
     },
   },
   amqp: {
