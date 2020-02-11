@@ -1,4 +1,3 @@
-
 async function createConstantKeys(service) {
   const { redis } = service
   const pipeline = redis.pipeline()
