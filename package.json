@@ -19,7 +19,7 @@
     "@microfleet/validation": "^8.1.2",
     "common-errors": "^1.0.5",
     "ms-conf": "^5.0.2",
-    "uuid": "^3.3.3"
+    "uuid": "^7.0.0"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
