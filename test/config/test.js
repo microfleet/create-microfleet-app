@@ -7,6 +7,12 @@ module.exports = {
       },
     },
   },
+  redis: {
+    hosts: Array.from({ length: 5 }).map((_, i) => ({
+      host: 'redis',
+      port: 7000 + i,
+    })),
+  },
   knex: {
     debug: false,
     client: 'pg',

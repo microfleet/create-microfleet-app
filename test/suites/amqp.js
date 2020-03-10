@@ -3,7 +3,6 @@ const rp = require('request-promise')
 const DemoApp = require('../../src')
 
 describe('#amqp action test', () => {
-  // eslint-disable-next-line no-unused-vars
   const query = rp.defaults({
     baseUrl: 'http://0.0.0.0:3000/amqp',
     method: 'POST',

@@ -2,6 +2,7 @@
   "extends": "makeomatic",
   "rules": {
     "semi": ["error", "never"],
-    "quotes": ["error", "single", { "allowTemplateLiterals": true }]
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1, "maxBOF": 0 }]
   }
 }
