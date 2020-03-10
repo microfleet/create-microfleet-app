@@ -19,7 +19,7 @@
     "@microfleet/validation": "^8.1.2",
     "common-errors": "^1.0.5",
     "ioredis": "^4.14.1",
-    "ms-conf": "^5.0.2",
+    "ms-conf": "^6.0.0",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
