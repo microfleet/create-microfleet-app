@@ -12,7 +12,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@hapi/hapi": "^18.3.2",
+    "@hapi/hapi": "^19.1.1",
     "@microfleet/core": "^15.0.0",
     "@microfleet/plugin-knex": "^0.2.6",
     "@microfleet/transport-amqp": "^15.0.0",
