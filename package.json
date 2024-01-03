@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@hapi/hapi": "^18.3.2",
-    "@microfleet/core": "^15.0.0",
+    "@microfleet/core": "^20.0.0",
     "@microfleet/plugin-knex": "^0.2.6",
     "@microfleet/transport-amqp": "^15.0.0",
     "@microfleet/validation": "^8.1.2",
